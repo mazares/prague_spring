@@ -1,0 +1,22 @@
+import { create } from "zustand"
+import { persist, createJSONStorage } from "zustand/middleware"
+
+interface ThemeStore {
+  theme: string;
+  setTheme: (theme: string) => void;
+  toggleTheme: () => void;
+}
+
+export const useThemeStore = create(
+  persist<ThemeStore>(
+    (set) => ({
+      theme: "light",
+      setTheme: (theme) => set({ theme }),
+      toggleTheme: () => set((state) => ({ theme: state.theme === "light" ? "dark" : "light" })),
+    }),
+    {
+      name: "theme-storage",
+      storage: createJSONStorage(() => localStorage),
+    }
+  )
+);
