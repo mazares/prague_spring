@@ -8,7 +8,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="grid border h-screen w-[95vw] md:w-[90vw] lg:w-[85vw] ">
+    <main className="grid  h-screen w-[95vw] md:w-[90vw] lg:w-[85vw] ">
       <Header />
       <PageLayout>{children}</PageLayout>
       <Footer />

@@ -4,10 +4,10 @@ import SearchBar from "./SearchBar";
 
 export default function Header() {
   return (
-    <header className="grid border self-start">
+    <header className="grid  self-start">
       <ThemeToggler />
-      <h1>header</h1>
-      <div className="flex border justify-between items-center w-full">
+      <h1 className="text-xl">She sells sea shells on a sea shore</h1>
+      <div className="flex  justify-between items-center w-full">
         <Navbar />
         <SearchBar />
       </div>

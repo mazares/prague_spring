@@ -73,7 +73,7 @@ const ConstellationCanvas = React.memo(() => {
         const dy = stars[i].y - stars[j].y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < 200) {
-          // ctx.strokeStyle = `rgba(100, 100, 100, ${1 - dist / 100})`;
+          ctx.strokeStyle = `rgba(100, 100, 100, ${1 - dist / 100})`;
           ctx.setLineDash([1, 2]);
           ctx.beginPath();
           ctx.moveTo(stars[i].x, stars[i].y);

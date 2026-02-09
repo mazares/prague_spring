@@ -4,7 +4,7 @@ export default function PageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="grid border place-content-center self-stretch ">
+    <main className="grid  place-content-center self-stretch overflow-y-auto ">
       {children}
     </main>
   );

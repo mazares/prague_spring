@@ -11,7 +11,10 @@ export default function SearchBar() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   return (
-    <form onSubmit={handleSearch} className="flex border rounded-2xl p-2 gap-2">
+    <form
+      onSubmit={handleSearch}
+      className="flex border rounded-2xl p-2 gap-2 backdrop-blur-xs"
+    >
       <input
         type="text"
         placeholder="Search..."
